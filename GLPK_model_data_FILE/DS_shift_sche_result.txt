@@ -1,0 +1,348 @@
+Problem:    DS_shift_sche
+Rows:       123
+Columns:    79 (77 integer, 77 binary)
+Non-zeros:  452
+Status:     INTEGER OPTIMAL
+Objective:  Objective = 1 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 Objective                   1                             
+     2 LB_shift[Mon]
+                                   4             2               
+     3 LB_shift[Tue]
+                                   4             2               
+     4 LB_shift[Wed]
+                                   3             2               
+     5 LB_shift[Thu]
+                                   4             2               
+     6 LB_shift[Fri]
+                                   4             2               
+     7 LB_shift[Sat]
+                                   3             2               
+     8 LB_shift[Sun]
+                                   3             2               
+     9 UB_shift[Mon]
+                                   4                           4 
+    10 UB_shift[Tue]
+                                   4                           4 
+    11 UB_shift[Wed]
+                                   3                           4 
+    12 UB_shift[Thu]
+                                   4                           4 
+    13 UB_shift[Fri]
+                                   4                           4 
+    14 UB_shift[Sat]
+                                   3                           4 
+    15 UB_shift[Sun]
+                                   3                           4 
+    16 LB_shift_SunSat[Sat]
+                                   3             3               
+    17 LB_shift_SunSat[Sun]
+                                   3             3               
+    18 PGM_shift_commit[Mon]
+                                   1             1               
+    19 PGM_shift_commit[Tue]
+                                   1             1               
+    20 PGM_shift_commit[Wed]
+                                   1             1               
+    21 PGM_shift_commit[Thu]
+                                   2             1               
+    22 PGM_shift_commit[Fri]
+                                   1             1               
+    23 PGM_shift_commit[Sat]
+                                   1             1               
+    24 PGM_shift_commit[Sun]
+                                   1             1               
+    25 LB_Staff_Satisfy[Ayaka]
+                                   1            -0               
+    26 LB_Staff_Satisfy[Atush]
+                                   0            -0               
+    27 LB_Staff_Satisfy[Kohei]
+                                   0            -0               
+    28 LB_Staff_Satisfy[Shota]
+                                   0            -0               
+    29 LB_Staff_Satisfy[Mayuk]
+                                   0            -0               
+    30 LB_Staff_Satisfy[Hiros]
+                                   0            -0               
+    31 LB_Staff_Satisfy[Kenic]
+                                   1            -0               
+    32 LB_Staff_Satisfy[Syori]
+                                   0            -0               
+    33 LB_Staff_Satisfy[Takuy]
+                                   1            -0               
+    34 LB_Staff_Satisfy[Tomoy]
+                                   0            -0               
+    35 LB_Staff_Satisfy[Masam]
+                                   0            -0               
+    36 UB_Staff_Satisfy[Ayaka]
+                                   0                          -0 
+    37 UB_Staff_Satisfy[Atush]
+                                  -1                          -0 
+    38 UB_Staff_Satisfy[Kohei]
+                                  -1                          -0 
+    39 UB_Staff_Satisfy[Shota]
+                                  -1                          -0 
+    40 UB_Staff_Satisfy[Mayuk]
+                                  -1                          -0 
+    41 UB_Staff_Satisfy[Hiros]
+                                  -1                          -0 
+    42 UB_Staff_Satisfy[Kenic]
+                                   0                          -0 
+    43 UB_Staff_Satisfy[Syori]
+                                  -1                          -0 
+    44 UB_Staff_Satisfy[Takuy]
+                                   0                          -0 
+    45 UB_Staff_Satisfy[Tomoy]
+                                  -1                          -0 
+    46 UB_Staff_Satisfy[Masam]
+                                  -1                          -0 
+    47 Shift[Ayaka,Mon]
+                                  -1            -1               
+    48 Shift[Ayaka,Tue]
+                                  -1            -1               
+    49 Shift[Ayaka,Wed]
+                                   0            -1               
+    50 Shift[Ayaka,Thu]
+                                  -1            -1               
+    51 Shift[Ayaka,Fri]
+                                   0            -1               
+    52 Shift[Ayaka,Sat]
+                                   0            -0               
+    53 Shift[Ayaka,Sun]
+                                   0            -0               
+    54 Shift[Atush,Mon]
+                                   0            -1               
+    55 Shift[Atush,Tue]
+                                   0            -0               
+    56 Shift[Atush,Wed]
+                                   0            -1               
+    57 Shift[Atush,Thu]
+                                   0            -0               
+    58 Shift[Atush,Fri]
+                                  -1            -1               
+    59 Shift[Atush,Sat]
+                                   0            -0               
+    60 Shift[Atush,Sun]
+                                  -1            -1               
+    61 Shift[Kohei,Mon]
+                                   0            -0               
+    62 Shift[Kohei,Tue]
+                                  -1            -1               
+    63 Shift[Kohei,Wed]
+                                   0            -0               
+    64 Shift[Kohei,Thu]
+                                  -1            -1               
+    65 Shift[Kohei,Fri]
+                                   0            -0               
+    66 Shift[Kohei,Sat]
+                                   0            -0               
+    67 Shift[Kohei,Sun]
+                                   0            -0               
+    68 Shift[Shota,Mon]
+                                   0            -0               
+    69 Shift[Shota,Tue]
+                                   0            -0               
+    70 Shift[Shota,Wed]
+                                   0            -0               
+    71 Shift[Shota,Thu]
+                                   0            -0               
+    72 Shift[Shota,Fri]
+                                   0            -0               
+    73 Shift[Shota,Sat]
+                                  -1            -1               
+    74 Shift[Shota,Sun]
+                                  -1            -1               
+    75 Shift[Mayuk,Mon]
+                                  -1            -1               
+    76 Shift[Mayuk,Tue]
+                                   0            -0               
+    77 Shift[Mayuk,Wed]
+                                   0            -1               
+    78 Shift[Mayuk,Thu]
+                                   0            -0               
+    79 Shift[Mayuk,Fri]
+                                  -1            -1               
+    80 Shift[Mayuk,Sat]
+                                   0            -0               
+    81 Shift[Mayuk,Sun]
+                                   0            -0               
+    82 Shift[Hiros,Mon]
+                                   0            -1               
+    83 Shift[Hiros,Tue]
+                                   0            -1               
+    84 Shift[Hiros,Wed]
+                                   0            -1               
+    85 Shift[Hiros,Thu]
+                                   0            -1               
+    86 Shift[Hiros,Fri]
+                                   0            -1               
+    87 Shift[Hiros,Sat]
+                                  -1            -1               
+    88 Shift[Hiros,Sun]
+                                  -1            -1               
+    89 Shift[Kenic,Mon]
+                                  -1            -1               
+    90 Shift[Kenic,Tue]
+                                  -1            -1               
+    91 Shift[Kenic,Wed]
+                                   0            -1               
+    92 Shift[Kenic,Thu]
+                                  -1            -1               
+    93 Shift[Kenic,Fri]
+                                   0            -0               
+    94 Shift[Kenic,Sat]
+                                   0            -0               
+    95 Shift[Kenic,Sun]
+                                   0            -0               
+    96 Shift[Syori,Mon]
+                                   0            -0               
+    97 Shift[Syori,Tue]
+                                   0            -0               
+    98 Shift[Syori,Wed]
+                                   0            -0               
+    99 Shift[Syori,Thu]
+                                   0            -0               
+   100 Shift[Syori,Fri]
+                                  -1            -1               
+   101 Shift[Syori,Sat]
+                                  -1            -1               
+   102 Shift[Syori,Sun]
+                                   0            -1               
+   103 Shift[Takuy,Mon]
+                                   0            -0               
+   104 Shift[Takuy,Tue]
+                                   0            -0               
+   105 Shift[Takuy,Wed]
+                                  -1            -1               
+   106 Shift[Takuy,Thu]
+                                  -1            -1               
+   107 Shift[Takuy,Fri]
+                                  -1            -1               
+   108 Shift[Takuy,Sat]
+                                   0            -0               
+   109 Shift[Takuy,Sun]
+                                   0            -1               
+   110 Shift[Tomoy,Mon]
+                                   0            -0               
+   111 Shift[Tomoy,Tue]
+                                  -1            -1               
+   112 Shift[Tomoy,Wed]
+                                  -1            -1               
+   113 Shift[Tomoy,Thu]
+                                   0            -1               
+   114 Shift[Tomoy,Fri]
+                                   0            -0               
+   115 Shift[Tomoy,Sat]
+                                   0            -1               
+   116 Shift[Tomoy,Sun]
+                                   0            -1               
+   117 Shift[Masam,Mon]
+                                  -1            -1               
+   118 Shift[Masam,Tue]
+                                   0            -1               
+   119 Shift[Masam,Wed]
+                                  -1            -1               
+   120 Shift[Masam,Thu]
+                                   0            -0               
+   121 Shift[Masam,Fri]
+                                   0            -0               
+   122 Shift[Masam,Sat]
+                                   0            -0               
+   123 Shift[Masam,Sun]
+                                   0            -1               
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[Ayaka,Mon] *              1             0             1 
+     2 x[Atush,Mon] *              0             0             1 
+     3 x[Kohei,Mon] *              0             0             1 
+     4 x[Shota,Mon] *              0             0             1 
+     5 x[Mayuk,Mon] *              1             0             1 
+     6 x[Hiros,Mon] *              0             0             1 
+     7 x[Kenic,Mon] *              1             0             1 
+     8 x[Syori,Mon] *              0             0             1 
+     9 x[Takuy,Mon] *              0             0             1 
+    10 x[Tomoy,Mon] *              0             0             1 
+    11 x[Masam,Mon] *              1             0             1 
+    12 x[Ayaka,Tue] *              1             0             1 
+    13 x[Atush,Tue] *              0             0             1 
+    14 x[Kohei,Tue] *              1             0             1 
+    15 x[Shota,Tue] *              0             0             1 
+    16 x[Mayuk,Tue] *              0             0             1 
+    17 x[Hiros,Tue] *              0             0             1 
+    18 x[Kenic,Tue] *              1             0             1 
+    19 x[Syori,Tue] *              0             0             1 
+    20 x[Takuy,Tue] *              0             0             1 
+    21 x[Tomoy,Tue] *              1             0             1 
+    22 x[Masam,Tue] *              0             0             1 
+    23 x[Ayaka,Wed] *              0             0             1 
+    24 x[Atush,Wed] *              0             0             1 
+    25 x[Kohei,Wed] *              0             0             1 
+    26 x[Shota,Wed] *              0             0             1 
+    27 x[Mayuk,Wed] *              0             0             1 
+    28 x[Hiros,Wed] *              0             0             1 
+    29 x[Kenic,Wed] *              0             0             1 
+    30 x[Syori,Wed] *              0             0             1 
+    31 x[Takuy,Wed] *              1             0             1 
+    32 x[Tomoy,Wed] *              1             0             1 
+    33 x[Masam,Wed] *              1             0             1 
+    34 x[Ayaka,Thu] *              1             0             1 
+    35 x[Atush,Thu] *              0             0             1 
+    36 x[Kohei,Thu] *              1             0             1 
+    37 x[Shota,Thu] *              0             0             1 
+    38 x[Mayuk,Thu] *              0             0             1 
+    39 x[Hiros,Thu] *              0             0             1 
+    40 x[Kenic,Thu] *              1             0             1 
+    41 x[Syori,Thu] *              0             0             1 
+    42 x[Takuy,Thu] *              1             0             1 
+    43 x[Tomoy,Thu] *              0             0             1 
+    44 x[Masam,Thu] *              0             0             1 
+    45 x[Ayaka,Fri] *              0             0             1 
+    46 x[Atush,Fri] *              1             0             1 
+    47 x[Kohei,Fri] *              0             0             1 
+    48 x[Shota,Fri] *              0             0             1 
+    49 x[Mayuk,Fri] *              1             0             1 
+    50 x[Hiros,Fri] *              0             0             1 
+    51 x[Kenic,Fri] *              0             0             1 
+    52 x[Syori,Fri] *              1             0             1 
+    53 x[Takuy,Fri] *              1             0             1 
+    54 x[Tomoy,Fri] *              0             0             1 
+    55 x[Masam,Fri] *              0             0             1 
+    56 x[Ayaka,Sat] *              0             0             1 
+    57 x[Atush,Sat] *              0             0             1 
+    58 x[Kohei,Sat] *              0             0             1 
+    59 x[Shota,Sat] *              1             0             1 
+    60 x[Mayuk,Sat] *              0             0             1 
+    61 x[Hiros,Sat] *              1             0             1 
+    62 x[Kenic,Sat] *              0             0             1 
+    63 x[Syori,Sat] *              1             0             1 
+    64 x[Takuy,Sat] *              0             0             1 
+    65 x[Tomoy,Sat] *              0             0             1 
+    66 x[Masam,Sat] *              0             0             1 
+    67 x[Ayaka,Sun] *              0             0             1 
+    68 x[Atush,Sun] *              1             0             1 
+    69 x[Kohei,Sun] *              0             0             1 
+    70 x[Shota,Sun] *              1             0             1 
+    71 x[Mayuk,Sun] *              0             0             1 
+    72 x[Hiros,Sun] *              1             0             1 
+    73 x[Kenic,Sun] *              0             0             1 
+    74 x[Syori,Sun] *              0             0             1 
+    75 x[Takuy,Sun] *              0             0             1 
+    76 x[Tomoy,Sun] *              0             0             1 
+    77 x[Masam,Sun] *              0             0             1 
+    78 u                           3                             
+    79 l                           2                             
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
