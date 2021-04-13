@@ -48,6 +48,6 @@ $ which glpsol
 下記コマンドでGLPKを呼び出し、最適化計算を行う。
 
 ```
-$ streamlit run ./src/ DS_shift_sche.py
+$ glpsol -m DS_shift_sche.mod -d DS_shift_sche.dat -o DS_shift_sche_result.txt --log DS_shift_sche_log.txt
 ```
 
