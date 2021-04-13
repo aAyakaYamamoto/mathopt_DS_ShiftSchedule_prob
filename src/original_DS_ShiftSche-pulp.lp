@@ -29,38 +29,38 @@ LB_Staff_Satisfy_Tomoya: - l + x(Tomoya,Fri) + x(Tomoya,Mon) + x(Tomoya,Sat)
  + x(Tomoya,Sun) + x(Tomoya,Thu) + x(Tomoya,Tue) + x(Tomoya,Wed) >= 0
 LB_shift_Fri: x(Atushi,Fri) + x(Ayaka,Fri) + x(Hiroshi,Fri) + x(Kenichi,Fri)
  + x(Kohei,Fri) + x(Masamichi,Fri) + x(Mayuko,Fri) + x(Shota,Fri)
- + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) >= 1
+ + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) >= 2
 LB_shift_Mon: x(Atushi,Mon) + x(Ayaka,Mon) + x(Hiroshi,Mon) + x(Kenichi,Mon)
  + x(Kohei,Mon) + x(Masamichi,Mon) + x(Mayuko,Mon) + x(Shota,Mon)
- + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) >= 1
+ + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) >= 2
 LB_shift_Sat: x(Atushi,Sat) + x(Ayaka,Sat) + x(Hiroshi,Sat) + x(Kenichi,Sat)
  + x(Kohei,Sat) + x(Masamichi,Sat) + x(Mayuko,Sat) + x(Shota,Sat)
- + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 1
+ + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 2
 LB_shift_Sun: x(Atushi,Sun) + x(Ayaka,Sun) + x(Hiroshi,Sun) + x(Kenichi,Sun)
  + x(Kohei,Sun) + x(Masamichi,Sun) + x(Mayuko,Sun) + x(Shota,Sun)
- + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 1
+ + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 2
 LB_shift_SunSat_Sat: x(Atushi,Sat) + x(Ayaka,Sat) + x(Hiroshi,Sat)
  + x(Kenichi,Sat) + x(Kohei,Sat) + x(Masamichi,Sat) + x(Mayuko,Sat)
- + x(Shota,Sat) + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 3
+ + x(Shota,Sat) + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 2
 LB_shift_SunSat_Sun: x(Atushi,Sun) + x(Ayaka,Sun) + x(Hiroshi,Sun)
  + x(Kenichi,Sun) + x(Kohei,Sun) + x(Masamichi,Sun) + x(Mayuko,Sun)
- + x(Shota,Sun) + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 3
+ + x(Shota,Sun) + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 2
 LB_shift_Thu: x(Atushi,Thu) + x(Ayaka,Thu) + x(Hiroshi,Thu) + x(Kenichi,Thu)
  + x(Kohei,Thu) + x(Masamichi,Thu) + x(Mayuko,Thu) + x(Shota,Thu)
- + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) >= 1
+ + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) >= 2
 LB_shift_Tue: x(Atushi,Tue) + x(Ayaka,Tue) + x(Hiroshi,Tue) + x(Kenichi,Tue)
  + x(Kohei,Tue) + x(Masamichi,Tue) + x(Mayuko,Tue) + x(Shota,Tue)
- + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) >= 1
+ + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) >= 2
 LB_shift_Wed: x(Atushi,Wed) + x(Ayaka,Wed) + x(Hiroshi,Wed) + x(Kenichi,Wed)
  + x(Kohei,Wed) + x(Masamichi,Wed) + x(Mayuko,Wed) + x(Shota,Wed)
- + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) >= 1
-PGM_shift_commit_Fri: x(Kenichi,Fri) + x(Shota,Fri) + x(Takuya,Fri) >= 1
-PGM_shift_commit_Mon: x(Kenichi,Mon) + x(Shota,Mon) + x(Takuya,Mon) >= 1
-PGM_shift_commit_Sat: x(Kenichi,Sat) + x(Shota,Sat) + x(Takuya,Sat) >= 1
-PGM_shift_commit_Sun: x(Kenichi,Sun) + x(Shota,Sun) + x(Takuya,Sun) >= 1
-PGM_shift_commit_Thu: x(Kenichi,Thu) + x(Shota,Thu) + x(Takuya,Thu) >= 1
-PGM_shift_commit_Tue: x(Kenichi,Tue) + x(Shota,Tue) + x(Takuya,Tue) >= 1
-PGM_shift_commit_Wed: x(Kenichi,Wed) + x(Shota,Wed) + x(Takuya,Wed) >= 1
+ + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) >= 2
+PGM_shift_commit_Fri: x(Kenichi,Fri) + x(Shota,Fri) + x(Takuya,Fri) >= 0
+PGM_shift_commit_Mon: x(Kenichi,Mon) + x(Shota,Mon) + x(Takuya,Mon) >= 0
+PGM_shift_commit_Sat: x(Kenichi,Sat) + x(Shota,Sat) + x(Takuya,Sat) >= 0
+PGM_shift_commit_Sun: x(Kenichi,Sun) + x(Shota,Sun) + x(Takuya,Sun) >= 0
+PGM_shift_commit_Thu: x(Kenichi,Thu) + x(Shota,Thu) + x(Takuya,Thu) >= 0
+PGM_shift_commit_Tue: x(Kenichi,Tue) + x(Shota,Tue) + x(Takuya,Tue) >= 0
+PGM_shift_commit_Wed: x(Kenichi,Wed) + x(Shota,Wed) + x(Takuya,Wed) >= 0
 Shift_(AtushiFri): x(Atushi,Fri) <= 1
 Shift_(AtushiMon): x(Atushi,Mon) <= 1
 Shift_(AtushiSat): x(Atushi,Sat) <= 0
@@ -165,25 +165,25 @@ UB_Staff_Satisfy_Tomoya: - u + x(Tomoya,Fri) + x(Tomoya,Mon) + x(Tomoya,Sat)
  + x(Tomoya,Sun) + x(Tomoya,Thu) + x(Tomoya,Tue) + x(Tomoya,Wed) <= 0
 UB_shift_Fri: x(Atushi,Fri) + x(Ayaka,Fri) + x(Hiroshi,Fri) + x(Kenichi,Fri)
  + x(Kohei,Fri) + x(Masamichi,Fri) + x(Mayuko,Fri) + x(Shota,Fri)
- + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) <= 4
+ + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) <= 3
 UB_shift_Mon: x(Atushi,Mon) + x(Ayaka,Mon) + x(Hiroshi,Mon) + x(Kenichi,Mon)
  + x(Kohei,Mon) + x(Masamichi,Mon) + x(Mayuko,Mon) + x(Shota,Mon)
- + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) <= 4
+ + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) <= 3
 UB_shift_Sat: x(Atushi,Sat) + x(Ayaka,Sat) + x(Hiroshi,Sat) + x(Kenichi,Sat)
  + x(Kohei,Sat) + x(Masamichi,Sat) + x(Mayuko,Sat) + x(Shota,Sat)
- + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) <= 4
+ + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) <= 3
 UB_shift_Sun: x(Atushi,Sun) + x(Ayaka,Sun) + x(Hiroshi,Sun) + x(Kenichi,Sun)
  + x(Kohei,Sun) + x(Masamichi,Sun) + x(Mayuko,Sun) + x(Shota,Sun)
- + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) <= 4
+ + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) <= 3
 UB_shift_Thu: x(Atushi,Thu) + x(Ayaka,Thu) + x(Hiroshi,Thu) + x(Kenichi,Thu)
  + x(Kohei,Thu) + x(Masamichi,Thu) + x(Mayuko,Thu) + x(Shota,Thu)
- + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) <= 4
+ + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) <= 3
 UB_shift_Tue: x(Atushi,Tue) + x(Ayaka,Tue) + x(Hiroshi,Tue) + x(Kenichi,Tue)
  + x(Kohei,Tue) + x(Masamichi,Tue) + x(Mayuko,Tue) + x(Shota,Tue)
- + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) <= 4
+ + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) <= 3
 UB_shift_Wed: x(Atushi,Wed) + x(Ayaka,Wed) + x(Hiroshi,Wed) + x(Kenichi,Wed)
  + x(Kohei,Wed) + x(Masamichi,Wed) + x(Mayuko,Wed) + x(Shota,Wed)
- + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) <= 4
+ + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) <= 3
 Binaries
 x(Atushi,Fri)
 x(Atushi,Mon)
