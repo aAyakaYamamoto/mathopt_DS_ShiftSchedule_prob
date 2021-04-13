@@ -24,7 +24,7 @@
 # requirement.txtのセットアップ
 
 * おそらくpython3.8以上が必要
-pipで必要なパッケージをインストールする。
+* pipで必要なパッケージをインストールする。
 
 ```
 $ pip install -r requirements.txt
