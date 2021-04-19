@@ -34,7 +34,8 @@ $ pip install -r requirements.txt
 
 下記コマンドでstremlitを起動し、GUIを立ち上げ操作する。
 ```
-$ streamlit run ./src/ DS_shift_sche.py
+$ cd ./src
+$ streamlit run DS_shift_sche.py
 ```
 
 # CUI:modファイルとdatファイルを用いてGLPKを起動する

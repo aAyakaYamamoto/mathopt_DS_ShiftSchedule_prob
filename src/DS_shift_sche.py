@@ -52,7 +52,7 @@ class MathOpt():
     ##############################
     @classmethod
     def make_model(self):
-        m = LpProblem("original_DS_ShiftSche") 
+        m = LpProblem("DS_Shift-ScheduleProb") 
 
         #### 集合
         # 人の集合
@@ -90,14 +90,14 @@ class MathOpt():
         # 出勤人数の下限
         LB_shift = st.slider(   
             '① 出勤人数の下限を決めてください', min_value=0, max_value=10, step=1, value=1)
-        st.write(" 毎日、少なくとも", LB_shift, '人は出勤します。')
+        st.write("→ 毎日、少なくとも", LB_shift, '人は出勤します。')
 
         st.write("-----------------------------")
 
         # 出勤人数の下限
         UB_shift = st.slider(
             '② 出勤人数の上限を決めてください', min_value=0, max_value=10, step=1, value=4)
-        st.write(" 毎日、多くても", UB_shift, '人まで出勤します。')
+        st.write("→ 毎日、多くても", UB_shift, '人まで出勤します。')
         for j in J:
             # １日少なくとも*人は出勤、多くても*人まで
             m += lpSum(x[i, j] for i in I) >= LB_shift, f"LB_shift_{j}"
@@ -107,7 +107,7 @@ class MathOpt():
 
         UB_PGM_shift = st.slider(
             '③ PGMの下限を決めてください', min_value=0, max_value=2, step=1, value=1)
-        st.write(" 毎日、少なくとも", UB_PGM_shift, '人はPGMが出勤します。')
+        st.write("→ 毎日、少なくとも", UB_PGM_shift, '人はPGMが出勤します。')
         for j in J:
             # PGMは少なくとも1人毎日出勤する
             m += lpSum(x[i, j] for i in I_) >= UB_PGM_shift,  f"PGM_shift_commit_{j}"
@@ -118,7 +118,7 @@ class MathOpt():
         # 土日の出勤人数の下限
         LB_sunsat_shift = st.slider(
             '④ 土曜日・日曜日の出勤人数の下限を決めてください', min_value=LB_shift, max_value=UB_shift, step=1, value=3)
-        st.write(" 土日は、少なくても", LB_sunsat_shift, '人は出勤します。')
+        st.write("→ 土日は、少なくても", LB_sunsat_shift, '人は出勤します。')
         # 土日は*人以上出勤する
         for j in J_ :
             m += lpSum(x[i, j] for i in I) >= LB_sunsat_shift,  f"LB_shift_SunSat_{j}"
@@ -137,8 +137,9 @@ class MathOpt():
 
         st.header('▼ 最適化計算')
         st.markdown('「提出済シフトにおけるシフト希望採用回数の隔たりを最小にする」最適化問題を計算します。')
-
-        if st.button("最適化計算スタート"):
+        answer = st.button("最適化計算スタート")
+        
+        if answer == True:
             text = st.empty()
             bar = st.progress(0)
             for i in range(100):
@@ -157,10 +158,14 @@ class MathOpt():
                 print(f"*" * 20)
                 print("解の情報")
                 print(f"*" * 20)
-                print('Status num.: ', m.status) 
-                print('Status: ', LpStatus[m.status])
+                print('Status num. : ', m.status) 
+                print('Status      : ', LpStatus[m.status])
+                print('Objective   : ', value(m.objective))
+                print('Variable up : ', value(up))
+                print('Variable low: ', value(low))
 
-                if m.status == 1:        
+                if m.status == 1:   
+                    st.markdown("→ 実行可能解が見つかりました！")     
                     # 計算結果をテキストファイルに保存
                     with open("../output_data/tmp.txt", "a", newline="") as file:
                         for i in I:
@@ -207,7 +212,9 @@ class MathOpt():
             except PulpSolverError as e:
                 st.markdown("実行可能解が見つかりませんでした。")
 
-    
+##############################
+### main
+##############################    
 if __name__ == '__main__':
     MathOpt.load_data()
     MathOpt.make_model()
