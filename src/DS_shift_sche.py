@@ -94,7 +94,7 @@ class MathOpt():
 
         st.write("-----------------------------")
 
-        # 出勤人数の下限
+        # 出勤人数の上限
         UB_shift = st.slider(
             '② 出勤人数の上限を決めてください', min_value=0, max_value=10, step=1, value=4)
         st.write("→ 毎日、多くても", UB_shift, '人まで出勤します。')
