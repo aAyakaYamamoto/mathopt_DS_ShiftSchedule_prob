@@ -1,7 +1,7 @@
 # 人の集合
-set I := Ayaka Atush Kohei Shota Mayuk Hiros Kenic Syori Takuy Tomoy Masam;
+set I := Ayaka Atsushi Kohei Shota Mayuko Hiroshi Kenichi Syori Takuya Tomoya Masamichi;
 # PGMの集合
-set I_ := Takuy Kenic Shota;
+set I_ := Takuya Kenichi Shota;
 # 日の集合
 set J := Mon Tue Wed Thu Fri Sat Sun;
 # 祝日の集合
@@ -9,15 +9,15 @@ set J_ := Sat Sun;
 
 # 提出シフトの情報
 param s : Mon Tue Wed Thu Fri Sat Sun :=
-Ayaka     1   1   1   1   1   0   0
-Atush     1   0   1   0   1   0   1
-Kohei     0   1   0   1   0   0   0
-Shota     0   0   0   0   0   1   1
-Mayuk     1   0   1   0   1   0   0
-Hiros     1   1   1   1   1   1   1
-Kenic     1   1   1   1   0   0   0
-Syori     0   0   0   0   1   1   1
-Takuy     0   0   1   1   1   0   1
-Tomoy     0   1   1   1   0   1   1
-Masam     1   1   1   0   0   0   1
+Ayaka       1   1   1   1   1   0   0
+Atsushi     1   0   1   0   1   0   1
+Kohei       0   1   0   1   0   0   0
+Shota       0   0   0   0   0   1   1
+Mayuko      1   0   1   0   1   0   0
+Hiroshi     1   1   1   1   1   1   1
+Kenichi     1   1   1   1   0   0   0
+Syori       0   0   0   0   1   1   1
+Takuya      0   0   1   1   1   0   1
+Tomoya      0   1   1   1   0   1   1
+Masamichi   1   1   1   0   0   0   1
 ;
