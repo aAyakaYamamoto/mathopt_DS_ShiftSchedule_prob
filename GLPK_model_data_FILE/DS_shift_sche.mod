@@ -20,12 +20,12 @@ minimize Objective:
 ##############################
 #	制約関数
 ##############################
-# 毎日のシフトの上限・下限
+# 毎日(平日)のシフトの上限・下限
 subject to LB_shift {j in J}:
 	sum{i in I} x[i, j] >= 2;
 subject to UB_shift {j in J}:
  	sum{i in I } x[i, j] <= 4;
-
+	 
 # 土・日のシフト人数の下限
 subject to LB_shift_SunSat {j in J: j in J_ }:
 	sum{i in I} x[i, j] >= 3;
