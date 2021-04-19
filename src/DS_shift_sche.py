@@ -87,14 +87,14 @@ class MathOpt():
         #### 制約条件
         st.header('▼ 作成するシフトの設定')
 
-        # 出勤人数の下限
+        # 制約：出勤人数の下限
         LB_shift = st.slider(   
             '① 出勤人数の下限を決めてください', min_value=0, max_value=10, step=1, value=1)
         st.write("→ 毎日、少なくとも", LB_shift, '人は出勤します。')
 
         st.write("-----------------------------")
 
-        # 出勤人数の上限
+        # 制約：出勤人数の上限
         UB_shift = st.slider(
             '② 出勤人数の上限を決めてください', min_value=0, max_value=10, step=1, value=4)
         st.write("→ 毎日、多くても", UB_shift, '人まで出勤します。')
@@ -105,17 +105,17 @@ class MathOpt():
 
         st.write("-----------------------------")
 
+        # 制約：PGMは少なくとも1人毎日出勤する
         UB_PGM_shift = st.slider(
             '③ PGMの下限を決めてください', min_value=0, max_value=2, step=1, value=1)
         st.write("→ 毎日、少なくとも", UB_PGM_shift, '人はPGMが出勤します。')
         for j in J:
-            # PGMは少なくとも1人毎日出勤する
             m += lpSum(x[i, j] for i in I_) >= UB_PGM_shift,  f"PGM_shift_commit_{j}"
 
 
         st.write("-----------------------------")
             
-        # 土日の出勤人数の下限
+        # 制約：土日の出勤人数の下限
         LB_sunsat_shift = st.slider(
             '④ 土曜日・日曜日の出勤人数の下限を決めてください', min_value=LB_shift, max_value=UB_shift, step=1, value=3)
         st.write("→ 土日は、少なくても", LB_sunsat_shift, '人は出勤します。')
@@ -123,13 +123,12 @@ class MathOpt():
         for j in J_ :
             m += lpSum(x[i, j] for i in I) >= LB_sunsat_shift,  f"LB_shift_SunSat_{j}"
 
-        # その他の制約
-        # シフト希望が通る回数の下限と上限
+        # 制約：シフト希望が通る回数の下限と上限
         for i in I:
             m += lpSum(x[i, j] for j in J) >= low  , f"LB_Staff_Satisfy_{i}"
             m += lpSum(x[i, j] for j in J) <= up  ,   f"UB_Staff_Satisfy_{i}"
             
-        # シフト希望日以外は出勤しない
+        # 制約：シフト希望日以外は出勤しない
         for i in I:
             for j in J:
                 m += s[i, j] >= x[i, j],  f"Shift_({i}{j})"
