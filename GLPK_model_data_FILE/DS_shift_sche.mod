@@ -5,7 +5,11 @@ set I;               # 人の集合
 set I_;		         # PGMの集合	    
 set J;               # 曜日の集合
 set J_;              # 土日の集合
-param s{I, J};       # 人iさんがj曜日に働ける時とき1,働けないなら0				
+param s{I, J};       # 人iさんがj曜日に働ける時とき1,働けないなら0	
+param Weekdays_Low;  # 毎日のシフトの上限数
+param Weekdays_Upp;　# 毎日のシフトの下限数
+param Holidays_Low;　# 土日のシフトの下限数
+param PGM_Low;		 # PGMのシフト人数の下限数	
 var x{I, J} binary;  # 人iさんがj曜日に働くとき1,働かないなら0
 var u;		         # シフト希望が通る上限（最大値）
 var l;               # シフト希望が通る下限（最小値）
@@ -22,17 +26,17 @@ minimize Objective:
 ##############################
 # 毎日(平日)のシフトの上限・下限
 subject to LB_shift {j in J}:
-	sum{i in I} x[i, j] >= 2;
+	sum{i in I} x[i, j] >= Weekdays_Low;
 subject to UB_shift {j in J}:
- 	sum{i in I } x[i, j] <= 4;
+ 	sum{i in I } x[i, j] <= Weekdays_Upp;
 	 
 # 土・日のシフト人数の下限
 subject to LB_shift_SunSat {j in J: j in J_ }:
-	sum{i in I} x[i, j] >= 3;
+	sum{i in I} x[i, j] >= Holidays_Low;
 
 # 毎日のシフトに必要なPGMの下限
 subject to PGM_shift_commit {j in J}:
-	sum{i in I: i in I_ } x[i, j] >= 1;
+	sum{i in I: i in I_ } x[i, j] >= PGM_Low;
 
 # シフト希望採用回数の上限・下限
 subject to LB_Staff_Satisfy {i in I}:
