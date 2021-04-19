@@ -137,7 +137,10 @@ class MathOpt():
         st.header('▼ 最適化計算')
         st.markdown('「提出済シフトにおけるシフト希望採用回数の隔たりを最小にする」最適化問題を計算します。')
         answer = st.button("最適化計算スタート")
-        
+
+        ##############################
+        ####　最適化計算
+        ##############################
         if answer == True:
             text = st.empty()
             bar = st.progress(0)
@@ -147,11 +150,9 @@ class MathOpt():
                 time.sleep(0.01)
 
             ##############################
-            ####　最適化計算
+            ####　出力の設定
             ##############################
-            # ソルバの設定
-            cmd = GLPK_CMD(timeLimit=None, keepFiles=True)
-            os.environ['NUMEXPR_MAX_THREADS'] = '8'
+            # コンソールの表示内容
             try:
                 m.solve(cmd)
                 print(f"*" * 20)
@@ -163,23 +164,23 @@ class MathOpt():
                 print('Variable up : ', value(up))
                 print('Variable low: ', value(low))
 
+                # 書き込み設定
                 if m.status == 1:   
                     st.markdown("→ 実行可能解が見つかりました！")     
-                    # 計算結果をテキストファイルに保存
-                    with open("../output_data/tmp.txt", "a", newline="") as file:
+                    # 計算結果 → テキストファイル
+                    with open("../output_data/result_ShftSchedule.txt", "a", newline="") as file:
                         for i in I:
                             for j in J:            
                                 print(x[i,j].value(), file=file, end="\n")
-                    # 保存したテキストデータをエクセルに書き込み
-                    book = openpyxl.load_workbook('../output_data/temp_schedule.xlsx', data_only = False)
+                    
+                    # テキストファイルのデータ → エクセル
+                    book = openpyxl.load_workbook('../output_data/result_ShftSchedule.xlsx', data_only = False)
                     sheet = book['result']
-
-                    # テキストファイルの読み込み
-                    file_data = open("../output_data/tmp.txt", "r", encoding="utf-8")
+                    file_data = open("../output_data/result_ShftSchedule.txt", "r", encoding="utf-8")
+                    # 指定箇所から書き込み
                     for j in range(2, 13):   
                         for i in range(2, 9):
                             pattern_data = file_data.readline().rstrip()
-
                             # エラー処理（ファイルが空の場合はskipする）
                             try:
                                 sheet.cell(row=j, column=i).value = str(pattern_data)
@@ -187,12 +188,12 @@ class MathOpt():
                                 continue
                     
                         # ファイル出力
-                        filename, file_extension = os.path.splitext("../output_data/tmp.txt")
+                        filename, file_extension = os.path.splitext("../output_data/result_ShftSchedule.txt")
                         out_file =  filename + ".xlsx"
                         book.save(out_file)
 
                     # 結果の表示
-                    df_out = pd.read_excel('../output_data/tmp.xlsx', index_col=0)
+                    df_out = pd.read_excel('../output_data/result_ShftSchedule.xlsx', index_col=0)
 
                     st.header('▼ 最適化計算後のシフトデータ')
                     st.markdown('計算後シフト内容：表（1：入れる、0：入れない）')
@@ -201,7 +202,7 @@ class MathOpt():
                     st.write(px.bar(df_out))
 
                     # 初期化
-                    os.remove('../output_data/tmp.txt')
+                    os.remove('../output_data/result_ShftSchedule.txt')
                     LB_shift = 0
                     UB_shift = 0
 
