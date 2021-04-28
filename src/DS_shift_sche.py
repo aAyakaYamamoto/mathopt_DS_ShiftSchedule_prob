@@ -107,7 +107,7 @@ class MathOpt():
 
         # 制約：PGMは少なくとも1人毎日出勤する
         UB_PGM_shift = st.slider(
-            '③ PGMの下限を決めてください', min_value=0, max_value=2, step=1, value=1)
+            '③ PGMの下限を決めてください (PGM: Shota, Kenichi, Takuya)', min_value=0, max_value=2, step=1, value=1)
         st.write("→ 毎日、少なくとも", UB_PGM_shift, '人はPGMが出勤します。')
         for j in J:
             m += lpSum(x[i, j] for i in I_) >= UB_PGM_shift,  f"PGM_shift_commit_{j}"

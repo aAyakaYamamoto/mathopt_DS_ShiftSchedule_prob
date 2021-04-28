@@ -8,11 +8,11 @@ Objective:  OBJ = 1 (MINimum)
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 LB_Staff_Satisfy_Atsushi
-                                   0             0               
+                                   1             0               
      2 LB_Staff_Satisfy_Ayaka
-                                   0             0               
+                                   1             0               
      3 LB_Staff_Satisfy_Hiroshi
-                                   0             0               
+                                   1             0               
      4 LB_Staff_Satisfy_Kenichi
                                    1             0               
      5 LB_Staff_Satisfy_Kohei
@@ -26,20 +26,20 @@ Objective:  OBJ = 1 (MINimum)
      9 LB_Staff_Satisfy_Syori
                                    0             0               
     10 LB_Staff_Satisfy_Takuya
-                                   1             0               
+                                   0             0               
     11 LB_Staff_Satisfy_Tomoya
                                    0             0               
-    12 LB_shift_Fri                4             1               
-    13 LB_shift_Mon                4             1               
-    14 LB_shift_Sat                4             1               
-    15 LB_shift_Sun                4             1               
+    12 LB_shift_Fri                4             3               
+    13 LB_shift_Mon                4             3               
+    14 LB_shift_Sat                4             3               
+    15 LB_shift_Sun                3             3               
     16 LB_shift_SunSat_Sat
                                    4             3               
     17 LB_shift_SunSat_Sun
-                                   4             3               
-    18 LB_shift_Thu                4             1               
-    19 LB_shift_Tue                2             1               
-    20 LB_shift_Wed                2             1               
+                                   3             3               
+    18 LB_shift_Thu                4             3               
+    19 LB_shift_Tue                3             3               
+    20 LB_shift_Wed                4             3               
     21 PGM_shift_commit_Fri
                                    1             1               
     22 PGM_shift_commit_Mon
@@ -49,15 +49,15 @@ Objective:  OBJ = 1 (MINimum)
     24 PGM_shift_commit_Sun
                                    1             1               
     25 PGM_shift_commit_Thu
-                                   2             1               
+                                   1             1               
     26 PGM_shift_commit_Tue
                                    1             1               
     27 PGM_shift_commit_Wed
                                    1             1               
     28 Shift_(AtsushiFri)
-                                   0                           1 
+                                   1                           1 
     29 Shift_(AtsushiMon)
-                                   0                           1 
+                                   1                           1 
     30 Shift_(AtsushiSat)
                                    0                           0 
     31 Shift_(AtsushiSun)
@@ -67,17 +67,17 @@ Objective:  OBJ = 1 (MINimum)
     33 Shift_(AtsushiTue)
                                    0                           0 
     34 Shift_(AtsushiWed)
-                                   1                           1 
-    35 Shift_(AyakaFri)
-                                   1                           1 
-    36 Shift_(AyakaMon)
                                    0                           1 
+    35 Shift_(AyakaFri)
+                                   0                           1 
+    36 Shift_(AyakaMon)
+                                   1                           1 
     37 Shift_(AyakaSat)
                                    1                           1 
     38 Shift_(AyakaSun)
                                    0                           0 
     39 Shift_(AyakaThu)
-                                   0                           1 
+                                   1                           1 
     40 Shift_(AyakaTue)
                                    0                           1 
     41 Shift_(AyakaWed)
@@ -85,15 +85,15 @@ Objective:  OBJ = 1 (MINimum)
     42 Shift_(HiroshiFri)
                                    0                           1 
     43 Shift_(HiroshiMon)
-                                   1                           1 
+                                   0                           1 
     44 Shift_(HiroshiSat)
                                    1                           1 
     45 Shift_(HiroshiSun)
-                                   0                           1 
+                                   1                           1 
     46 Shift_(HiroshiThu)
                                    0                           1 
     47 Shift_(HiroshiTue)
-                                   0                           1 
+                                   1                           1 
     48 Shift_(HiroshiWed)
                                    0                           1 
     49 Shift_(KenichiFri)
@@ -105,11 +105,11 @@ Objective:  OBJ = 1 (MINimum)
     52 Shift_(KenichiSun)
                                    0                           0 
     53 Shift_(KenichiThu)
-                                   1                           1 
+                                   0                           1 
     54 Shift_(KenichiTue)
                                    1                           1 
     55 Shift_(KenichiWed)
-                                   0                           1 
+                                   1                           1 
     56 Shift_(KoheiFri)
                                    0                           0 
     57 Shift_(KoheiMon)
@@ -131,17 +131,17 @@ Objective:  OBJ = 1 (MINimum)
     65 Shift_(MasamichiSat)
                                    0                           0 
     66 Shift_(MasamichiSun)
-                                   1                           1 
+                                   0                           1 
     67 Shift_(MasamichiThu)
                                    0                           0 
     68 Shift_(MasamichiTue)
                                    0                           1 
     69 Shift_(MasamichiWed)
-                                   0                           1 
+                                   1                           1 
     70 Shift_(MayukoFri)
                                    1                           1 
     71 Shift_(MayukoMon)
-                                   1                           1 
+                                   0                           1 
     72 Shift_(MayukoSat)
                                    0                           0 
     73 Shift_(MayukoSun)
@@ -151,7 +151,7 @@ Objective:  OBJ = 1 (MINimum)
     75 Shift_(MayukoTue)
                                    0                           0 
     76 Shift_(MayukoWed)
-                                   0                           1 
+                                   1                           1 
     77 Shift_(ShotaFri)
                                    0                           0 
     78 Shift_(ShotaMon)
@@ -171,9 +171,9 @@ Objective:  OBJ = 1 (MINimum)
     85 Shift_(SyoriMon)
                                    0                           0 
     86 Shift_(SyoriSat)
-                                   0                           1 
-    87 Shift_(SyoriSun)
                                    1                           1 
+    87 Shift_(SyoriSun)
+                                   0                           1 
     88 Shift_(SyoriThu)
                                    0                           0 
     89 Shift_(SyoriTue)
@@ -193,13 +193,13 @@ Objective:  OBJ = 1 (MINimum)
     96 Shift_(TakuyaTue)
                                    0                           0 
     97 Shift_(TakuyaWed)
-                                   1                           1 
+                                   0                           1 
     98 Shift_(TomoyaFri)
                                    0                           0 
     99 Shift_(TomoyaMon)
                                    0                           0 
    100 Shift_(TomoyaSat)
-                                   1                           1 
+                                   0                           1 
    101 Shift_(TomoyaSun)
                                    0                           1 
    102 Shift_(TomoyaThu)
@@ -207,13 +207,13 @@ Objective:  OBJ = 1 (MINimum)
    103 Shift_(TomoyaTue)
                                    0                           1 
    104 Shift_(TomoyaWed)
-                                   0                           1 
+                                   1                           1 
    105 UB_Staff_Satisfy_Atsushi
-                                  -1                           0 
+                                   0                           0 
    106 UB_Staff_Satisfy_Ayaka
-                                  -1                           0 
+                                   0                           0 
    107 UB_Staff_Satisfy_Hiroshi
-                                  -1                           0 
+                                   0                           0 
    108 UB_Staff_Satisfy_Kenichi
                                    0                           0 
    109 UB_Staff_Satisfy_Kohei
@@ -227,25 +227,25 @@ Objective:  OBJ = 1 (MINimum)
    113 UB_Staff_Satisfy_Syori
                                   -1                           0 
    114 UB_Staff_Satisfy_Takuya
-                                   0                           0 
+                                  -1                           0 
    115 UB_Staff_Satisfy_Tomoya
                                   -1                           0 
    116 UB_shift_Fri                4                           4 
    117 UB_shift_Mon                4                           4 
    118 UB_shift_Sat                4                           4 
-   119 UB_shift_Sun                4                           4 
+   119 UB_shift_Sun                3                           4 
    120 UB_shift_Thu                4                           4 
-   121 UB_shift_Tue                2                           4 
-   122 UB_shift_Wed                2                           4 
+   121 UB_shift_Tue                3                           4 
+   122 UB_shift_Wed                4                           4 
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 l                           2             0               
      2 u                           3             0               
      3 x(Atsushi,Fri)
-                    *              0             0             1 
+                    *              1             0             1 
      4 x(Atsushi,Mon)
-                    *              0             0             1 
+                    *              1             0             1 
      5 x(Atsushi,Sat)
                     *              0             0             1 
      6 x(Atsushi,Sun)
@@ -255,26 +255,26 @@ Objective:  OBJ = 1 (MINimum)
      8 x(Atsushi,Tue)
                     *              0             0             1 
      9 x(Atsushi,Wed)
-                    *              1             0             1 
-    10 x(Ayaka,Fri) *              1             0             1 
-    11 x(Ayaka,Mon) *              0             0             1 
+                    *              0             0             1 
+    10 x(Ayaka,Fri) *              0             0             1 
+    11 x(Ayaka,Mon) *              1             0             1 
     12 x(Ayaka,Sat) *              1             0             1 
     13 x(Ayaka,Sun) *              0             0             1 
-    14 x(Ayaka,Thu) *              0             0             1 
+    14 x(Ayaka,Thu) *              1             0             1 
     15 x(Ayaka,Tue) *              0             0             1 
     16 x(Ayaka,Wed) *              0             0             1 
     17 x(Hiroshi,Fri)
                     *              0             0             1 
     18 x(Hiroshi,Mon)
-                    *              1             0             1 
+                    *              0             0             1 
     19 x(Hiroshi,Sat)
                     *              1             0             1 
     20 x(Hiroshi,Sun)
-                    *              0             0             1 
+                    *              1             0             1 
     21 x(Hiroshi,Thu)
                     *              0             0             1 
     22 x(Hiroshi,Tue)
-                    *              0             0             1 
+                    *              1             0             1 
     23 x(Hiroshi,Wed)
                     *              0             0             1 
     24 x(Kenichi,Fri)
@@ -286,11 +286,11 @@ Objective:  OBJ = 1 (MINimum)
     27 x(Kenichi,Sun)
                     *              0             0             1 
     28 x(Kenichi,Thu)
-                    *              1             0             1 
+                    *              0             0             1 
     29 x(Kenichi,Tue)
                     *              1             0             1 
     30 x(Kenichi,Wed)
-                    *              0             0             1 
+                    *              1             0             1 
     31 x(Kohei,Fri) *              0             0             1 
     32 x(Kohei,Mon) *              0             0             1 
     33 x(Kohei,Sat) *              0             0             1 
@@ -305,17 +305,17 @@ Objective:  OBJ = 1 (MINimum)
     40 x(Masamichi,Sat)
                     *              0             0             1 
     41 x(Masamichi,Sun)
-                    *              1             0             1 
+                    *              0             0             1 
     42 x(Masamichi,Thu)
                     *              0             0             1 
     43 x(Masamichi,Tue)
                     *              0             0             1 
     44 x(Masamichi,Wed)
-                    *              0             0             1 
+                    *              1             0             1 
     45 x(Mayuko,Fri)
                     *              1             0             1 
     46 x(Mayuko,Mon)
-                    *              1             0             1 
+                    *              0             0             1 
     47 x(Mayuko,Sat)
                     *              0             0             1 
     48 x(Mayuko,Sun)
@@ -325,7 +325,7 @@ Objective:  OBJ = 1 (MINimum)
     50 x(Mayuko,Tue)
                     *              0             0             1 
     51 x(Mayuko,Wed)
-                    *              0             0             1 
+                    *              1             0             1 
     52 x(Shota,Fri) *              0             0             1 
     53 x(Shota,Mon) *              0             0             1 
     54 x(Shota,Sat) *              1             0             1 
@@ -335,8 +335,8 @@ Objective:  OBJ = 1 (MINimum)
     58 x(Shota,Wed) *              0             0             1 
     59 x(Syori,Fri) *              1             0             1 
     60 x(Syori,Mon) *              0             0             1 
-    61 x(Syori,Sat) *              0             0             1 
-    62 x(Syori,Sun) *              1             0             1 
+    61 x(Syori,Sat) *              1             0             1 
+    62 x(Syori,Sun) *              0             0             1 
     63 x(Syori,Thu) *              0             0             1 
     64 x(Syori,Tue) *              0             0             1 
     65 x(Syori,Wed) *              0             0             1 
@@ -353,13 +353,13 @@ Objective:  OBJ = 1 (MINimum)
     71 x(Takuya,Tue)
                     *              0             0             1 
     72 x(Takuya,Wed)
-                    *              1             0             1 
+                    *              0             0             1 
     73 x(Tomoya,Fri)
                     *              0             0             1 
     74 x(Tomoya,Mon)
                     *              0             0             1 
     75 x(Tomoya,Sat)
-                    *              1             0             1 
+                    *              0             0             1 
     76 x(Tomoya,Sun)
                     *              0             0             1 
     77 x(Tomoya,Thu)
@@ -367,7 +367,7 @@ Objective:  OBJ = 1 (MINimum)
     78 x(Tomoya,Tue)
                     *              0             0             1 
     79 x(Tomoya,Wed)
-                    *              0             0             1 
+                    *              1             0             1 
 
 Integer feasibility conditions:
 

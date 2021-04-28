@@ -30,16 +30,16 @@ LB_Staff_Satisfy_Tomoya: - l + x(Tomoya,Fri) + x(Tomoya,Mon) + x(Tomoya,Sat)
  + x(Tomoya,Sun) + x(Tomoya,Thu) + x(Tomoya,Tue) + x(Tomoya,Wed) >= 0
 LB_shift_Fri: x(Atsushi,Fri) + x(Ayaka,Fri) + x(Hiroshi,Fri) + x(Kenichi,Fri)
  + x(Kohei,Fri) + x(Masamichi,Fri) + x(Mayuko,Fri) + x(Shota,Fri)
- + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) >= 1
+ + x(Syori,Fri) + x(Takuya,Fri) + x(Tomoya,Fri) >= 3
 LB_shift_Mon: x(Atsushi,Mon) + x(Ayaka,Mon) + x(Hiroshi,Mon) + x(Kenichi,Mon)
  + x(Kohei,Mon) + x(Masamichi,Mon) + x(Mayuko,Mon) + x(Shota,Mon)
- + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) >= 1
+ + x(Syori,Mon) + x(Takuya,Mon) + x(Tomoya,Mon) >= 3
 LB_shift_Sat: x(Atsushi,Sat) + x(Ayaka,Sat) + x(Hiroshi,Sat) + x(Kenichi,Sat)
  + x(Kohei,Sat) + x(Masamichi,Sat) + x(Mayuko,Sat) + x(Shota,Sat)
- + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 1
+ + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 3
 LB_shift_Sun: x(Atsushi,Sun) + x(Ayaka,Sun) + x(Hiroshi,Sun) + x(Kenichi,Sun)
  + x(Kohei,Sun) + x(Masamichi,Sun) + x(Mayuko,Sun) + x(Shota,Sun)
- + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 1
+ + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 3
 LB_shift_SunSat_Sat: x(Atsushi,Sat) + x(Ayaka,Sat) + x(Hiroshi,Sat)
  + x(Kenichi,Sat) + x(Kohei,Sat) + x(Masamichi,Sat) + x(Mayuko,Sat)
  + x(Shota,Sat) + x(Syori,Sat) + x(Takuya,Sat) + x(Tomoya,Sat) >= 3
@@ -48,13 +48,13 @@ LB_shift_SunSat_Sun: x(Atsushi,Sun) + x(Ayaka,Sun) + x(Hiroshi,Sun)
  + x(Shota,Sun) + x(Syori,Sun) + x(Takuya,Sun) + x(Tomoya,Sun) >= 3
 LB_shift_Thu: x(Atsushi,Thu) + x(Ayaka,Thu) + x(Hiroshi,Thu) + x(Kenichi,Thu)
  + x(Kohei,Thu) + x(Masamichi,Thu) + x(Mayuko,Thu) + x(Shota,Thu)
- + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) >= 1
+ + x(Syori,Thu) + x(Takuya,Thu) + x(Tomoya,Thu) >= 3
 LB_shift_Tue: x(Atsushi,Tue) + x(Ayaka,Tue) + x(Hiroshi,Tue) + x(Kenichi,Tue)
  + x(Kohei,Tue) + x(Masamichi,Tue) + x(Mayuko,Tue) + x(Shota,Tue)
- + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) >= 1
+ + x(Syori,Tue) + x(Takuya,Tue) + x(Tomoya,Tue) >= 3
 LB_shift_Wed: x(Atsushi,Wed) + x(Ayaka,Wed) + x(Hiroshi,Wed) + x(Kenichi,Wed)
  + x(Kohei,Wed) + x(Masamichi,Wed) + x(Mayuko,Wed) + x(Shota,Wed)
- + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) >= 1
+ + x(Syori,Wed) + x(Takuya,Wed) + x(Tomoya,Wed) >= 3
 PGM_shift_commit_Fri: x(Kenichi,Fri) + x(Shota,Fri) + x(Takuya,Fri) >= 1
 PGM_shift_commit_Mon: x(Kenichi,Mon) + x(Shota,Mon) + x(Takuya,Mon) >= 1
 PGM_shift_commit_Sat: x(Kenichi,Sat) + x(Shota,Sat) + x(Takuya,Sat) >= 1
